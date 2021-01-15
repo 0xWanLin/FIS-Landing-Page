@@ -3,8 +3,8 @@
 ### My Internship Project
 
 #### Tasks Completed:
-- Use JavaScript to toggle between the languages (English and Vietnamese)
-- Fetch data from registration forms to Google Sheet (using [Google App Scripts](https://developers.google.com/apps-script))
+- Used JavaScript to toggle between the languages (English and Vietnamese)
+- Fetched data from registration forms to Google Sheet (using [Google App Scripts](https://developers.google.com/apps-script))
 
 #### Ongoing Tasks:
 - Create a new landing page that includes the function of toggling between English and Vietnamese
