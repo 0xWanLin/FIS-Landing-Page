@@ -4,7 +4,7 @@ $(document).ready(function () {
    submit.click(function () {
       // serialize = to convert form data into a JavaScript object 
       var data = $('form#myForm_viet').serialize();
-      // check if the form is empty, it will the function checkform (codes at the bottom)
+      // check if the form is empty, it will run the function checkform (codes at the bottom)
       if (data == "surname=&name=&email=&phone=&org=&computers=") {
          var check = checkform("myForm")
          if (check === false){
