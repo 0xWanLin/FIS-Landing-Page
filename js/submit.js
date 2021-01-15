@@ -1,5 +1,6 @@
 $(document).ready(function () {
-   var submit = $("button[type='reset']");
+   // button type which for me: mine is 'reset'
+   var submit = $("button[type='reset']"); 
    submit.click(function () {
       var data = $('form#myForm_viet').serialize();
       if (data == "surname=&name=&email=&phone=&org=&computers=") {
@@ -18,7 +19,8 @@ $(document).ready(function () {
 
       $.ajax({
          type: 'GET',
-         url: 'https://script.google.com/macros/s/AKfycbyENptYxfqW0cvYzv9MEnAvVbLmSMr2iOIfFhtYk8cBb_t4jdoEcULfgw/exec',
+         // google app scripts webapp link
+         url: 'https://script.google.com/macros/s/AKfycbyENptYxfqW0cvYzv9MEnAvVbLmSMr2iOIfFhtYk8cBb_t4jdoEcULfgw/exec', 
          dataType: 'json',
          crossDomain: true,
          data: data,
@@ -41,8 +43,10 @@ $(document).ready(function () {
       var Organisation = document.forms[formnumber]["org"].value;
       var Email = document.forms[formnumber]["email"].value;
 
-      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      // check email format using regex
+      var mailformat = (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/); 
 
+      // if any inputs are empty, this will run
       if (Surname === "" || Name ===""){
          alert('Surname or Name cannot be empty, Họ hoặc Tên không được để trống')
          return false
