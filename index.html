@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>FPT supports free data security monitoring for 3 months</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- Jquery needed -->
+      <script src="js/jquery-3.5.1.min.js"></script>
+   </head>
+   <body>
+      <!-- english registration form -->
+      <div lang="en" aria-hidden="true">
+         <form method="GET" action="/" class="form-container form-popup" id="myForm">
+            <span lang="en" class="close">&times;</span>
+            <h1 lang="en" style="font-weight: normal;text-align: center;font-size: 30px;">Free Registration</h1>
+            <br>
+            <label lang="en" for="surname" class="required"><b>Surname</b></label>
+            <input lang="en" type="text" name="surname" required>
+            
+            <label lang="en" for="name" class="required"><b>Name</b></label>
+            <input lang="en" type="text" name="name" required>
+
+            <label lang="en" for="email" class="required"><b>Email</b></label>
+            <input lang="en" type="text" name="email" required>
+
+            <label lang="en" for="phone" class="required"><b>Phone Number</b></label>
+            <input lang="en" type="text" name="phone" required>
+         
+            <label lang="en" for="org" class="required"><b>Organisation Name</b></label>
+            <input lang="en" type="text" name="org" required>
+
+            <label lang="en" for="computers"><b>Number of computers to be monitored (maximum 50)</b></label>
+            <input lang="en" type="number" min="1" max="50" name="computers"><br>
+
+            <button lang="en" id="submitForm" type="reset">Register</button>
+         </form>
+      </div>
+      <!-- vietnamese registration form -->
+      <div lang="vi" aria-hidden="true">
+         <form method="GET" action="/" class="form-container form-popup" id="myForm_viet">
+               <span lang="vi" class="close_viet">&times;</span>
+               <h1 lang="vi" style="font-weight: normal;text-align: center;">Đăng ký miễn phí</h1>
+               <br>
+               <label lang="vi" for="surname" class="required"><b>Họ</b></label>
+               <input lang="vi" type="text" name="surname" required>
+               
+               <label lang="vi" for="name" class="required"><b>Tên</b></label>
+               <input lang="vi" type="text" name="name" required>
+
+               <label lang="vi" for="email" class="required"><b>Email</b></label>
+               <input lang="vi" type="text" name="email" required>
+
+               <label lang="vi" for="phone" class="required"><b>Số điện thoại</b></label>
+               <input lang="vi" type="text" name="phone" required>
+            
+               <label lang="vi" for="org" class="required"><b>Tên tổ chức</b></label>
+               <input lang="vi" type="text" name="org" required>
+
+               <label lang="vi" for="computers"><b>Số máy tính cần giám sát (tối đa 50)</b></label>
+               <input lang="vi" type="number" min="1" max="50" name="computers"><br>
+
+               <button lang="vi" type="reset">Đăng ký</button>
+         </form>
+      </div>
+      <nav class="navigationbar">
+         <div class="container-section">
+            <div class="dropdown-lang" id="switch-lang">
+               <a href="javascript:;" onclick="changePageTitle()">Change Language</a>
+            </div>
+             <div id="mainListDiv" class="main_list">
+                 <ul class="navlinks">
+                     <li lang="en"><a href="#">Home</a></li>
+                     <li lang="en"><a href="#challenges">Challenges</a></li>
+                     <li lang="en"><a href="#solution">Solution</a></li>
+                     <li lang="en"><a href="#registration">Registration</a></li>
+                     <li lang="en"><a href="#customer">Customers</a></li>
+                     <li lang="en"><a href="#contact">Contact</a></li>
+
+                     <li lang="vi"><a href="#">Trang Chủ</a></li>
+                     <li lang="vi"><a href="#challenges">Thử thách</a></li>
+                     <li lang="vi"><a href="#solution">Giải pháp</a></li>
+                     <li lang="vi"><a href="#registration">Đăng ký</a></li>
+                     <li lang="vi"><a href="#customer">Khách hàng</a></li>
+                     <li lang="vi"><a href="#contact">Liên hệ</a></li>
+                 </ul>
+             </div>
+             <span class="navTrigger">
+                 <i></i>
+                 <i></i>
+                 <i></i>
+             </span>
+         </div>
+      </nav>
+      <!-- top section -->
+      <div class="home-section main" style="padding: 2.5em 0;">
+         <img src="images/twologo.png" class="twologo">
+         <div class="container">
+            <div class="row align-items-center">
+               <!-- english -->
+               <div lang="en" class="col-md-8">
+                  <div id="blurbackground"></div>
+                  <h1 class="h1class" style="padding-bottom: 10px;">FPT.EagleEye MDR</h1>
+                  <h2 class="d-block mb-4 h2class" style="padding-bottom: 1vh">DATA SECURITY PROTECTION FOR ENTERPRISES<br> TRIAL - REAL EXPERIENCE</h2>
+                  <span class="d-block mb-3 spanclass">Free 3-months trial <br> of Security Monitoring Service and Incident Response</span>
+                  <button id="myButton" class="open-button">Free Registration</button><br>
+               </div>
+               <!-- vietnamese -->
+               <div lang="vi" class="col-md-8">
+                  <div id="blurbackground"></div>
+                  <h1 class="h1class" style="padding-bottom: 10px;">FPT.EagleEye MDR</h1>
+                  <h2 class="d-block mb-4 h2class" style="padding-bottom: 1vh">BẢO VỆ AN NINH DỮ LIỆU DOANH NGHIỆP<br>DÙNG THỬ - TRẢI NGHIỆM THẬT</h2>
+                  <span class="d-block mb-3 spanclass">Dùng thử miễn phí 3 tháng <br> Dịch vụ Giám sát an toàn thông tin và phản ứng sự cố</span>
+                  <button id="myButton_viet" class="open-button">Đăng ký miễn phí</button><br>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- section 2 (challenges) english-->
+      <div class="container main"><a  href="#challenges" name="challenges"></a>
+         <div class="row align-items-center">
+           <div lang="en" class="col-md-8">
+               <h1 class="d-block mb-4 sectionH2">How do you know if your business data is safe?</h1><br>
+               <span class="d-block mb-3 sectionPara">Cyber ​​attacks are becoming more and more sophisticated, not only are system intrusion, information exploitation, self-seeking but also organized attacks, economically and politically motivated.
+                  Existing malware types can bypass enterprise protection systems, take control of users' computers, and launch escalation attacks. In data security, businesses often face the following conditions:<br>
+                  <span class="section2Para1">
+                     <i class="fa fa-chevron-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;Computers are scattered in the business<br>
+                     <i class="fa fa-chevron-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;Unusual computers behaviours are not detected<br>
+                     <i class="fa fa-chevron-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;Having difficulty complying with security policies<br><br>
+               </span>
+                  The way to know if your business data is in a safe zone is to monitor all behaviors that lead to the risk of information insecurity at workstations or endpoints 24/7. 
+                  Information security monitoring service and incident response FPT.EagleEye MDR is a powerful ally to help businesses monitor security and prevent targeted attacks.<br><br>
+               </span>
+            </div>
+            <!-- vietnamese -->
+            <div lang="vi" class="col-md-8">
+               <h1 class="d-block mb-4 sectionH2">Làm sao biết được dữ liệu doanh nghiệp bạn đang an toàn?</h1><br>
+               <span class="d-block mb-3 sectionPara">Các cuộc tấn công mạng ngày càng tinh vi, không chỉ là những hành vi xâm nhập hệ thống, khai thác thông tin, trục lợi vì mục đích cá nhân mà còn là những cuộc tấn công có tổ chức, có động cơ kinh tế và chính trị. 
+                  Các loại mã độc hiện nay có thể vượt qua các hệ thống bảo vệ của  doanh nghiệp, chiếm quyền điều khiển máy tính người dùng và thực hiện tấn công leo thang. Trong bảo mật dữ liệu, Doanh nghiệp thường đối mặt với các tình trạng:<br>
+                  <span class="section2Para1">
+                     <i class="fa fa-chevron-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;Máy tính nằm phân tán trong doanh nghiệp<br>
+                     <i class="fa fa-chevron-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;Không phát hiện được các hành vi bất thường trên máy tính<br>
+                     <i class="fa fa-chevron-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;Khó khăn trong việc tuân thủ các chính sách ATTT<br><br>
+               </span>
+               Cách để biết được dữ liệu doanh nghiệp bạn đang trong vùng an toàn là giám sát mọi hành vi dẫn đến nguy cơ mất an toàn an ninh thông tin tại các máy tính trạm hay endpoint 24/7. 
+               Dịch vụ Giám sát an toàn thông tin và phản ứng sự cố FPT.EagleEye MDR là đồng minh đắc lực giúp Doanh nghiệp giám sát ATTT và chống lại các cuộc tấn công có chủ đích.<br><br>
+               </span>
+            </div>
+            <div class="col-md-4">
+               <img src="images/Cyber-Security-Monitoring.jpg" class="img-side-section2">
+            </div>
+         </div>
+       </div>
+     </div>
+     <br><br>
+      <!-- section 3 (solution) need to improve on the layout here--> 
+      <div class="main bg-grey"><a href="#solution" name="solution"></a>
+         <div class="column-section">
+            <h2 lang="en" class="section3H2 column-section">FPT.EagleEye MDR - monitoring, detecting data security risks, warning in 10 minutes</h2>
+            <h2 lang="vi" class="section3H2 column-section">FPT.EagleEye MDR – giám sát, phát hiện nguy cơ an ninh dữ liệu, cảnh báo trong 10 phút</h2>
+            <span lang="en" class="section3Para column-section" >Security monitoring solution and automatic security incident response according to the first software application service (SaaS) method in Vietnam 
+               helps to detect the risk of cyber attacks and issue alerts within 10 minutes, optimal 24/7 workstation control.
+            </span>
+            <span lang="vi" class="section3Para column-section">Giải pháp giám sát an toàn thông tin và phản ứng sự cố bảo mật tự động theo phương thức dịch vụ ứng dụng phần mềm (SaaS) đầu tiên tại Việt Nam 
+               giúp phát hiện nguy cơ tấn công mạng và đưa ra cảnh báo chỉ trong vòng 10 phút, tối ưu kiểm soát máy trạm 24/7.
+            </span>
+            <h2 lang="en" class="section3H2-1 column-section">Salient Features</h2>
+            <h2 lang="vi" class="section3H2-1 column-section">Tính năng nổi bật</h2>
+            <!-- 24/7 monitoring -->
+            <div lang="en" class="section3Para1 column-section">24/7 monitoring<br></div>
+            <div lang="vi" class="section3Para1 column-section">Giám sát 24/7<br></div>
+            <div style="position: relative;margin-left: 22%;" class="column-section">
+               <img src="images/kisspng-computer-icons-security-symbol-computer-monitors-c-24-7-transparent-5b489567e8c7f8.6772594815314834959535.png" class="img1">
+               <div lang="en" style="position: relative;" class="move-right">
+                  <div class="monitoring-247">With the real-time reporting mechanism for all behaviors that cause information insecurity, FPT.EagleEye MDR keeps data in the eyes of the business 24/7. 
+                  We control general security across the entire system even when you are sleeping.
+                  </div>
+               </div>
+               <div lang="vi" style="position: relative;" class="move-right">
+                  <div class="monitoring-247">Với cơ chế báo cáo mọi hành vi gây mất an toàn thông tin theo thời gian thực, 
+                  FPT.EagleEye MDR giúp dữ liệu luôn nằm trong tầm mắt của doanh nghiệp 24/7. 
+                  Chúng tôi kiểm soát mức độ bảo mật chung trên toàn bộ hệ thống ngay cả khi bạn đang ngủ. 
+                  </div>
+               </div>
+            </div>
+            <!-- Do an active threat search -->
+            <div lang="en" class="section3Para1 column-section">Do an active threat search<br><br></div>
+            <div lang="vi" class="section3Para1 column-section">Thực hiện tìm mối nguy chủ động<br><br></div>
+            <div style="position: relative;margin-left: 22%;" class="column-section">
+               <img src="images/pngwing.com.png" class="img2">
+               <div lang="en" style="position: relative;" class="move-right">
+                  <div class="monitoring-247">FPT experts EagleEye continuously searches and early detects threats with automatic intelligent monitoring scenario.
+                  </div>
+               </div>
+               <div lang="vi" style="position: relative;" class="move-right">
+                  <div class="monitoring-247">Các chuyên gia FPT EagleEye liên tục tìm kiếm, phát hiện sớm mối đe dọa với kịch bản giám sát thông minh tự động.
+                  </div>
+               </div>
+            </div>
+            <!-- Attack detection is based on the MITRE ATT & CK attack frame with over 200 behaviors -->
+            <div lang="en" class="section3Para1 column-section">Attack detection is based on the MITRE ATT & CK attack frame with over 200 behaviors<br><br></div>
+            <div lang="vi" class="section3Para1 column-section">Thực hiện tìm mối nguy chủ động<br><br></div>
+            <div style="position: relative;margin-left: 22%;" class="column-section">
+               <img src="images/analytic-icon-40164.png" class="img2">
+               <div lang="en" style="position: relative;" class="move-right">
+                  <div class="monitoring-247">FPT.EagleEye MDR analyzes thousands of behaviors recorded on Endpoint using intrusion detection system on cloud computing platform. Potential threats will be analyzed by FPT EagleEye security experts, 
+                  investigated using centralized analysis and processing technology to detect unknown types of malware in the world.
+                  </div>
+               </div>
+               <div lang="vi" style="position: relative;" class="move-right">
+                  <div class="monitoring-247">FPT.EagleEye MDR phân tích hàng ngàn hành vi được ghi nhận trên Endpoint bằng hệ thống phát hiện xâm nhập trên nền tảng điện toán đám mây. Những mối đe dọa tiềm tàng sẽ được đội ngũ chuyên gia bảo mật FPT EagleEye phân tích, 
+                  tiến hành điều tra bằng công nghệ phân tích và xử lý tập trung có thể phát hiện được những loại mã độc chưa từng được biết đến trên thế giới.
+                  </div>
+               </div>
+            </div>
+            <br>
+            <br>
+            <!-- Measure the efficiency -->
+            <div lang="en" class="section3Para1 column-section">Measure the efficiency<br><br></div>
+            <div lang="vi" class="section3Para1 column-section">Đo lường hiệu quả<br><br></div>
+            <div style="position: relative;margin-left: 22%;" class="column-section">
+               <img src="images/pngegg.png" class="img2">
+               <div lang="en" style="position: relative;" class="move-right">
+                  <div class="monitoring-247">FPT.EagleEye MDR analyzes thousands of behaviors recorded on Endpoint using intrusion detection system on cloud computing platform. Potential threats will be analyzed by FPT EagleEye security experts, 
+                  investigated using centralized analysis and processing technology to detect unknown types of malware in the world.
+                  </div>
+               </div>
+               <div lang="vi" style="position: relative;" class="move-right">
+                  <div class="monitoring-247">Chúng tôi chỉ cho bạn nơi bạn được bảo vệ và đưa ra lời khuyên về cách khắc phục. 
+                  Thông tin chi tiết sẽ được cập nhật trên cổng thông tin có giao diện thân thiện với người dùng và chứng minh sự cải tiến của bạn bằng việc báo cáo toàn bộ các tiến trình.
+                  </div>
+               </div>
+            </div>
+            <button lang="en" id="myButton1" class="open-button1">Get Free</button>
+            <button lang="vi" id="myButton_viet1" class="open-button1">Dùng miễn phí</button>
+         </div> 
+      </div>
+      <!-- section 4 (registration) -->
+      <div class="main bg-aqua"><a href="#registration" name="registration"></a>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-5 align-self-center">
+                  <div id="video-area">  
+                     <video style="margin-left: 10%;" class="video-section" poster="images/video.png" controls>
+                        <source src="video/Video_MDR 27-05.mp4" type="video/mp4">
+                     </video>
+                  </div>
+                  <p lang="en" class="video-caption">Introducing <br> FPT.EagleEye MDR Information Security <br> and Incident Response Service</p>
+                  <p lang="vi" class="video-caption">Giới thiệu Dịch vụ Giám sát an toàn thông tin và Phản ứng sự cố <br> FPT.EagleEye MDR</p>
+               </div>
+               <div class="col-1"></div>
+               <div class="col-md-6">
+                     <h1 lang="en" class="title-white">Free for 3 months</h1>
+                     <h1 lang="vi" class="title-white">Miễn phí 3 tháng sử dụng</h1>
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="">
+                           <img src="images/contact-form(1).png" class="img-register">
+                        </div>
+                        <div class="left-text">
+                           <div lang="en" class="left-text-title">&nbsp;&nbsp;1 Minute</div>
+                           <div lang="en" class="left-text-title1">&nbsp;&nbsp;&nbsp;Registration</div>
+                           <div lang="vi" class="left-text-title">&nbsp;&nbsp;1 Phút</div>
+                           <div lang="vi" class="left-text-title1">&nbsp;&nbsp;&nbsp;Đăng ký</div> 
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="">
+                           <img src="images/support.png" class="img-register">
+                        </div>
+                        <div class="left-text">
+                           <div lang="en" class="left-text-title">&nbsp;&nbsp;2 o'clock</div>
+                           <div lang="en" class="left-text-title1">&nbsp;&nbsp;&nbsp;Deployment</div>
+                           <div lang="vi" class="left-text-title">&nbsp;&nbsp;2 Giờ</div>
+                           <div lang="vi" class="left-text-title1">&nbsp;&nbsp;&nbsp;Triển khai</div> 
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div>
+                           <img src="images/alarm.png" class="img-register">
+                        </div>
+                        <div class="left-text">
+                           <div lang="en" class="left-text-title">&nbsp;&nbsp;10 minutes</div>
+                           <div lang="en" class="left-text-title1">&nbsp;&nbsp;&nbsp;Warnings in advance</div>
+                           <div lang="vi" class="left-text-title">&nbsp;&nbsp;10 Phút</div>
+                           <div lang="vi" class="left-text-title1">&nbsp;&nbsp;&nbsp;Cảnh báo trước</div> 
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div>
+                           <img src="images/support(1).png" class="img-register">
+                        </div>
+                        <div class="left-text" style="margin-top: 10px;">
+                           <div lang="en" class="left-text-title">&nbsp;&nbsp;8x5</div>
+                           <div lang="en" class="left-text-title1">&nbsp;&nbsp;&nbsp;Multi-channel support</div>
+                           <div lang="vi" class="left-text-title">&nbsp;&nbsp;8x5</div>
+                           <div lang="vi" class="left-text-title1">&nbsp;&nbsp;&nbsp;Hỗ trợ đa kênh</div> 
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- section 5 (registration) english -->
+      <div style="padding: 2.5em 0;">
+         <div class="containter">
+            <div class="row align-items-center">
+               <div lang="en" class="col-md-6">
+                  <h1 class="d-block mb-4 title-blue" style="padding-bottom: 1vh; font-weight: bold;margin-top: 5%;margin-left: 30%;">Commitment to services by FPT</h1>
+                  <span class="d-block mb-3" style="font-size: 20px;font-weight: normal;margin-left: 30%;">
+                     <i class="fa fa-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;Information exchanged between FPT and enterprises through the Customer Portal<br>
+                     <i class="fa fa-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;Complete MDR service implementation within 02 hours after completing enterprise information verification.<br>
+                     <i class="fa fa-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;There are warnings and recommendations to remedy cases that cause 
+                     food safety loss within 10 minutes after the behavior occurs during working hours.<br>
+                     <i class="fa fa-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;The commitment to quality of service (SLA) to support the handling of safety issues is created in the form 
+                     of a Ticket through the Customer Portal:<br>
+                     <div style="margin-left:20px;" class="caption-blue">
+                        <i class="fa fa-minus"></i>&nbsp;&nbsp;&nbsp;&nbsp;Serious (Critical): 01 hour<br>
+                        <i class="fa fa-minus"></i>&nbsp;&nbsp;&nbsp;&nbsp;High: 02 hours<br>
+                        <i class="fa fa-minus"></i>&nbsp;&nbsp;&nbsp;&nbsp;Medium: 04 hours<br>
+                        <i class="fa fa-minus"></i>&nbsp;&nbsp;&nbsp;&nbsp;Low: 08 hours<br>
+                     </div>
+                  </span>
+               </div>
+               <!-- vietnamese -->
+               <div lang="vi" class="col-md-6">
+                  <h1 class="d-block mb-4 title-blue" style="padding-bottom: 1vh; font-weight: bold;margin-top: 5%;margin-left: 30%;">Cam kết dịch vụ của FPT</h1>
+                  <span class="d-block mb-3" style="font-size: 20px;font-weight: normal;margin-left: 30%;">
+                     <i class="fa fa-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;Thông tin trao đổi trong suốt giữa FPT và doanh nghiệp thông qua Customer Portal<br>
+                     <i class="fa fa-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;Hoàn tất triển khai dịch vụ MDR trong vòng 02 tiếng sau khi hoàn tất xác minh thông tin doanh nghiệp.<br>
+                     <i class="fa fa-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;Có cảnh báo và khuyến cáo khắc phục các trường hợp gây mất ATTT trong vòng 10p sau khi hành vi xảy ra trong giờ hành chính.<br>
+                     <i class="fa fa-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;Cam kết chất lượng dịch vụ (SLA) hỗ trợ xử lý các sự cố ATTT được tạo dưới dạng 
+                     Phiếu yêu cầu (Ticket) thông qua Cổng thông tin dành cho doanh nghiệp (Customer Portal):<br>
+                     <div style="margin-left:20px;" class="caption-blue">
+                        <i class="fa fa-minus"></i>&nbsp;&nbsp;&nbsp;&nbsp; Nghiêm Trọng (Critical): 01 tiếng<br>
+                        <i class="fa fa-minus"></i>&nbsp;&nbsp;&nbsp;&nbsp;Cao (High): 02 tiếng<br>
+                        <i class="fa fa-minus"></i>&nbsp;&nbsp;&nbsp;&nbsp;Trung bình (Medium): 04 tiếng<br>
+                        <i class="fa fa-minus"></i>&nbsp;&nbsp;&nbsp;&nbsp;Thấp (Low): 08 tiếng<br>
+                     </div>
+                  </span>
+               </div>
+               <div class="col-md-6">
+                  <img src="images/200717-Cybersecurity-response-900x400.jpg" class="img-side">
+               </div>
+            </div>
+         </div>
+      </div>
+      <br><br>
+      <!-- section 6 -->
+      <div class="main bg-lightgrey" style="padding: 2.5em 0;">
+         <div class="container">
+            <div lang="en"><h1 lang="en" class="d-block mb-4 title-blue1" style="text-align: center;">Three steps to register</h1><br><br></div>
+            <div lang="vi"><h1 lang="en" class="d-block mb-4 title-blue1" style="text-align: center;">Ba bước đăng ký</h1><br><br></div>
+            <div class="row">
+               <!-- english -->
+               <div lang="en" class="col-sm">
+                  <div class="">
+                     <img src="images/number1.png" class="img-steps">
+                  </div>
+                  <div class="left-text-title2">
+                     <div class="left-text-title2-1">Business registration</div>
+                     Register for business information at https://www.fpt-is.com/mdr
+                  </div>
+               </div>
+               <!-- vietnamese -->
+               <div lang="vi" class="col-sm">
+                  <div class="">
+                     <img src="images/number1.png" class="img-steps">
+                  </div>
+                  <div class="left-text-title2">
+                     <div class="left-text-title2-1">Doanh nghiệp đăng ký</div>
+                     Đăng ký thông tin doanh nghiệp tại https://www.fpt-is.com/mdr
+                  </div>
+               </div>
+               <!-- english -->
+               <div lang="en" class="col-sm">
+                  <div class="">
+                     <img src="images/number2.png" class="img-steps">
+                  </div>
+                  <div class="left-text-title2">
+                     <div class="left-text-title2-1">FPT contacted and signed the Privacy Statement</div>
+                     FPT conducts information verification and signs a non-disclosure agreement (Non Disclosure Agreement)
+                  </div>
+               </div>
+               <!-- vietnamese -->
+               <div lang="vi" class="col-sm">
+                  <div class="">
+                     <img src="images/number2.png" class="img-steps">
+                  </div>
+                  <div class="left-text-title2">
+                     <div class="left-text-title2-1">FPT liên hệ ký Cam kết bảo mật</div>
+                     FPT tiến hành xác minh thông tin và ký cam kết không tiết lộ thông tin (Non Disclosure Agreement)
+                  </div>
+               </div>
+               <!-- english -->
+               <div lang="en" class="col-sm">
+                  <div class="">
+                     <img src="images/number3.png" class="img-steps">
+                  </div>
+                  <div class="left-text-title2">
+                     <div class="left-text-title2-1">Login and Use</div>
+                     Log in to the Portal and start using the service
+                  </div>
+               </div>
+               <!-- vietnamese -->
+               <div lang="vi" class="col-sm">
+                  <div class="">
+                     <img src="images/number3.png" class="img-steps">
+                  </div>
+                  <div class="left-text-title2">
+                     <div class="left-text-title2-1">Đăng nhập và Sử dụng</div>
+                     Đăng nhập vào Cổng thông tin và bắt đầu sử dụng dịch vụ
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <button lang="en" id="myButton2" class="open-button2 btn-3steps">Free Registration</button>
+               <button lang="vi" id="myButton_viet2" class="open-button2 btn-3steps">Đăng ký miễn phí</button>
+            </div>
+         </div>
+      </div>
+      <!-- section 7 -->
+      <div class="main bg-darkaqua" style="padding: 2.5em 0;">
+         <div class="container">
+            <!-- english -->
+            <div lang="en" class="col-md-12">
+               <h1 class="d-block mb-4 title-white1" style="padding-bottom: 1vh;margin-top: 20px;margin-left: 30px;">FPT.EagleEye - security ally with the enterprise</h1>
+            </div>
+            <!-- vietnamese -->
+            <div lang="vi" class="col-md-12">
+               <h1 class="d-block mb-4 title-white1" style="padding-bottom: 1vh;margin-top: 20px;margin-left: 30px;">FPT.EagleEye - đồng minh bảo mật cùng doanh nghiệp</h1>
+            </div>
+            <div class="row" style="margin-top:40px;">
+               <div class="col-md-2" style="margin-top: 5vh;">
+                 <img src="images/bank-myb_f25f.jpg" class="img-side">                      
+               </div>
+               <!-- english -->
+               <div lang="en" class="col-md-4">
+                 <div class="left-text-title2 pink-text" style="margin-left: 35px;">Bank:</div>
+                 <div class="white-text" style="margin-left: 35px;">FPT Cybersecurity Center has discovered malware that digs money into a computer even though the Bank is equipped with traditional anti-virus software. 
+                 The code readers of windows progress "csrss.exe" can use the computer's CPU to mine virtual money for the purpose of profiting and spreading on a large scale to other computers on the 
+                 network. FPT Cyber ​​Security Center promptly took decisive action to ban hash and kill the process of malicious code, in order to prevent malicious code from causing harm to the Bank.</div> 
+               </div>
+               <!-- vietnamese -->
+               <div lang="vi" class="col-md-4">
+                  <div class="left-text-title2 pink-text" style="margin-left: 35px;">Ngân hàng:</div>
+                  <div class="white-text" style="margin-left: 35px;">Trung tâm An ninh mạng FPT đã phát hiện mã độc đào tiền xâm nhập một máy tính dù Ngân hàng đã trang bị phần mềm diệt virus truyền thống. 
+                     Mã độc giả danh tiến tình của windows “csrss.exe” có thể sử dụng CPU của máy tính để đào tiền ảo với mục đích trục lợi và lây lan trên diện rộng cho các máy tính khác nằm trong mạng. 
+                     Trung tâm An ninh mạng FPT đã kịp thời hành động quyết đoán là ban hash và kill tiến trình của mã độc, nhằm ngăn chặn việc mã độc gây ra tổn hại cho Ngân hàng.</div> 
+               </div>
+               <div class="col-md-2" style="margin-top: 5vh;">
+                 <img src="images/hospital-hallway.jpg" class="img-side">                      
+               </div>
+               <!-- english -->
+               <div lang="en" class="col-md-4">
+                 <div class="left-text-title2 pink-text" style="margin-left: 35px;">Hospital:</div>
+                 <div class="white-text" style="margin-left: 35px;">Workstations discovered to be infected with WannaCry ransomware are very famous in 2017 and have data encryption behavior spreading on a large scale. 
+                 There is no anti-virus software on the workstation. FPT Cyber ​​Security Center quickly detects and discusses directly with customers to isolate the workstation infected with 
+                 ransomware. The process of isolating the workstation only takes 3 seconds after the customer agrees to isolate without needing to find the workstation location, 
+                 unplug the network cable, or find the port on the network device to turn off.</div>
+               </div>
+               <!-- vietnamese -->
+               <div lang="vi" class="col-md-4">
+                  <div class="left-text-title2 pink-text" style="margin-left: 35px;">Bệnh viện:</div>
+                  <div class="white-text" style="margin-left: 35px;">Máy trạm được phát hiện bị nhiễm ransomware WannaCry rất nổi tiếng năm 2017 có hành vi mã hóa dữ liệu lây lan trên diện rộng. 
+                     Trên máy trạm không có bất cứ phần mềm phòng chống antivirus nào. Trung tâm An ninh mạng FPT nhanh chóng phát hiện, trao đổi trực tiếp với khách hàng để cô lập máy trạm bị nhiễm 
+                     ransomware. Quá trình cô lập máy trạm chỉ mất 3s kể từ khi khách hàng đồng ý cô lập mà không cần tìm vị trí máy trạm, rút dây mạng, hay tìm port trên thiết bị mạng để tắt.</div>
+                </div>
+            </div>
+         </div>
+      </div>
+      <!-- section 8 -->
+      <div style="padding: 2.5em 0;"><a href="#customer" name="customer"></a>
+         <div class="containter">
+            <p>SECTION 8 (CUSTOMER)</p>
+         </div>
+      </div>
+      <script>
+         // close the registeration form while clicking outside of the form (english)
+         $(document).ready(function () {
+            $('#myForm').hide()
+         });
+
+         $(document).mouseup(function (e) {
+            var popup = $("#myForm");
+            if (!$('#myForm').is(e.target) && !popup.is(e.target) && popup.has(e.target).length == 0) {
+                  popup.hide(500);
+            }
+         });
+
+         // close the registeration form while clicking outside of the form (vietnamese)
+         $(document).ready(function () {
+            $('#myForm_viet').hide()
+         });
+
+         $(document).mouseup(function (e) {
+            var popup = $("#myForm_viet");
+            if (!$('#myForm_viet').is(e.target) && !popup.is(e.target) && popup.has(e.target).length == 0) {
+                  popup.hide(500);
+            }
+         });
+      </script>
+      <script>
+      // tried to change the title language but failed
+      // function changePageTitle() { 
+      //       vietnamesePageTitle = 'FPT hỗ trợ Giám sát bảo mật dữ liệu miễn phí trong 3 tháng'; 
+      //       document.querySelector('title').textContent 
+      //               = vietnamesePageTitle; 
+      //   } 
+
+      // $(window).bind("load", function() {  
+	   // $('#video-area').load('video/Video_MDR 27-05.mp4');
+      // }); 
+      
+      // Function used to shrink nav bar removing paddings and adding blue color navbar
+      $(window).scroll(function() {
+            if ($(document).scrollTop() > 900) {
+               $('.navigationbar').addClass('affix-navbar');
+               console.log("OK");
+            } else {
+               $('.navigationbar').removeClass('affix-navbar');
+            }
+      });
+     </script>
+      <script src="js/lang-switch.js"></script>
+      <script src="js/submit.js"></script>
+      <script src="js/openform.js"></script>
+   </body>
+</html>
