@@ -4,7 +4,7 @@ $(document).ready(function () {
    submit.click(function () {
       // serialize = to convert form data into a JavaScript object 
       var data = $('form#myForm_viet').serialize();
-      // check if the form is empty, it will run the function checkform (codes at the bottom)
+      // check if the form is empty, it will the function checkform (codes at the bottom)
       if (data == "surname=&name=&email=&phone=&org=&computers=") {
          var check = checkform("myForm")
          if (check === false){
@@ -49,28 +49,32 @@ $(document).ready(function () {
       var mailformat = (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/); 
 
       // if any inputs are empty, this will run
-      if (Surname === "" || Name ===""){
-         alert('Surname or Name cannot be empty, Họ hoặc Tên không được để trống')
+      if (Surname === "") {
+         alert('Surname cannot be empty, Họ không được để trống')
          return false
       }
-      else if(Email === ""){
+      else if (Name === "") {
+         alert('Name cannot be empty, Tên không được để trống')
+         return false
+      }
+      else if (Email === "") {
          alert('Email cannot be empty, Email không được để trống')
          return false
       }
-      else if(Phone === ""){
+      else if (Phone === "") {
          alert('Phone number cannot be empty, Số điện thoại không được để trống')
          return false
       }
-      else if(Organisation === ""){
+      else if (Organisation === "") {
          alert('Organisation Name cannot be empty, Tên tổ chức không được để trống')
          return false
       }
 
-      if(Email.match(mailformat)){
+      if (Email.match(mailformat)) {
          return true;
       }
-      else{
-         alert("Please check your email format, Vui lòng kiểm tra định dạng email của bạn");
+      else {
+         alert('Please check your email format, Vui lòng kiểm tra định dạng email của bạn');
          return false;
       }
    }
