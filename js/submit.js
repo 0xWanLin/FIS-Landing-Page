@@ -46,7 +46,7 @@ $(document).ready(function () {
       var Email = document.forms[formnumber]["email"].value;
 
       // check email format using regex
-      var mailformat = (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/); 
+      var emailFormat = (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/); 
 
       // if any inputs are empty, this will run
       if (Surname === "") {
@@ -70,7 +70,7 @@ $(document).ready(function () {
          return false
       }
 
-      if (Email.match(mailformat)) {
+      if (Email.match(emailFormat)) {
          return true;
       }
       else {
