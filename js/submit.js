@@ -2,7 +2,9 @@ $(document).ready(function () {
    // button type which for me: mine is 'reset'
    var submit = $("button[type='reset']"); 
    submit.click(function () {
+      // serialize = to convert form data into a JavaScript object 
       var data = $('form#myForm_viet').serialize();
+      // check if the form is empty, it will the function checkform (codes at the bottom)
       if (data == "surname=&name=&email=&phone=&org=&computers=") {
          var check = checkform("myForm")
          if (check === false){
@@ -28,7 +30,7 @@ $(document).ready(function () {
             if (data == 'false') {
                alert('Adding of your information has failed, please try again');
             } else {
-               window.location.href = "thankyou.html"
+               window.location.href = "thankyou.html" 
                // alert('Thank you!')
             }
          }
