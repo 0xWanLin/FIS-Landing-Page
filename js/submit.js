@@ -6,14 +6,14 @@ $(document).ready(function () {
       var data = $('form#myForm_viet').serialize();
       // check if the form is empty, it will the function checkform (codes at the bottom)
       if (data == "surname=&name=&email=&phone=&org=&computers=") {
-         var check = checkform("myForm")
+         var check = formCheck("myForm")
          if (check === false){
             return false
          }
          var data = $('form#myForm').serialize();
       }
       else {
-         var check = checkform("myForm_viet")
+         var check = formCheck("myForm_viet")
          if (check === false){
             return false
          }
@@ -37,7 +37,7 @@ $(document).ready(function () {
       });
    });
 
-   function checkform(formnumber){
+   function formCheck(formnumber){
 
       var Surname = document.forms[formnumber]["surname"].value;
       var Name = document.forms[formnumber]["name"].value;
