@@ -808,13 +808,13 @@ a:active {
     width: 100%;
     /* float: right; */
 }
-.left-text-title {
+.left-text1 {
     color: #f4c3ff;
     font-size: 25px;
     font-weight: bold;
     margin-top: 15px;
 }
-.left-text-title1 {
+.left-title1 {
     color: white;
     font-size: 20px;
     font-weight: normal;
@@ -846,13 +846,13 @@ a:active {
     /* margin-bottom: 20px; */
     margin-right: 5%;
 }
-.left-text-title2 {
+.left-text2 {
     font-size: 15px;
     color: #2a2a2a;
     padding-bottom: 10px;
     font-weight: 600;
 }
-.left-text-title2-1 {
+.left-title2-1 {
     font-size: 15px;
     color: #2a2a2a;
     padding-bottom: 10px;
