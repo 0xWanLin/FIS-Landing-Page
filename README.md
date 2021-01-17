@@ -9,6 +9,6 @@
 - Fetched data from registration forms to Google Sheet (using [Google App Scripts](https://developers.google.com/apps-script))
 
 #### Ongoing Tasks:
-- Improve the layout and design of the website (maybe try to use Bootstrap)
+- Improve the layout and design of the website (try to use Bootstrap)
 - Check the translations
 
