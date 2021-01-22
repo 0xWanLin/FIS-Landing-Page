@@ -687,6 +687,7 @@ a:active {
     background-color: #d4d4d4;
     min-height: 100%;
     padding: 20px;
+    border-radius: 15px;
 }
 /* section 3 */
 .section3H2{
