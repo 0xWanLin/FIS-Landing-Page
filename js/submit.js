@@ -44,6 +44,7 @@ $(document).ready(function () {
       var Phone = document.forms[formnumber]["phone"].value;
       var Organisation = document.forms[formnumber]["org"].value;
       var Email = document.forms[formnumber]["email"].value;
+      var Computers = document.forms[formnumber]["computers"].value;
 
       // check email format using regex
       var emailFormat = (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/); 
@@ -67,6 +68,10 @@ $(document).ready(function () {
       }
       else if (Organisation === "") {
          alert('Organisation Name cannot be empty, Tên tổ chức không được để trống')
+         return false
+      }
+      else if (Computers > '50') {
+         alert('Computers cannot be more than 50, Máy tính không được nhiều hơn 50')
          return false
       }
 

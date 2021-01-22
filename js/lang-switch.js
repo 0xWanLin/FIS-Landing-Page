@@ -1,6 +1,8 @@
 $('[lang="vi"]').hide();
 
-$('#switch-lang').click(function() {
-  $('[lang="vi"]').toggle();
-  $('[lang="en"]').toggle();
+$(document).ready(function() { 
+  $('#switch-lang').click(function() {
+    $('[lang="vi"]').toggle();
+    $('[lang="en"]').toggle();
+  });
 });
