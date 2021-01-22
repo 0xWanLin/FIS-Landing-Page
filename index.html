@@ -118,7 +118,7 @@
          </div>
       </div>
       <!-- section 2 (challenges) english-->
-      <div class="container main section2"><a  href="#challenges" name="challenges"></a>
+      <div class="container main section-box"><a  href="#challenges" name="challenges"></a>
          <div class="row align-items-center">
             <div lang="en" class="col-md-8">
                <h1 class="d-block mb-4 sectionH2">How do you know if your business data is safe?</h1><br>
@@ -154,7 +154,7 @@
        </div>
      </div>
       <!-- section 3 (solution)--> 
-      <div class="main bg-grey section3" style="padding-bottom: 5%;"><a href="#solution" name="solution"></a>
+      <div class="main bg-grey section-box" style="padding-bottom: 5%;"><a href="#solution" name="solution"></a>
          <div class="container">
             <div class="row">
                <div lang="en" class="col-md-12">
@@ -232,7 +232,7 @@
          </div>
       </div>
       <!-- section 4 (registration) -->
-      <div class="main bg-aqua section4"><a href="#registration" name="registration"></a>
+      <div class="main bg-aqua section-box"><a href="#registration" name="registration"></a>
          <div class="container">
             <div class="row">
                <div class="col-md-5" style="padding-top: 50px;">
@@ -306,7 +306,7 @@
          </div>
       </div>
       <!-- section 5 (registration) english -->
-      <div style="padding: 2em 0;" class="section5">
+      <div style="padding: 2em 0;" class="section-box">
          <div class="container">
             <div class="row align-items-center">
                <div lang="en" class="col-md-6">
@@ -351,7 +351,7 @@
       </div>
       <br><br>
       <!-- section 6 -->
-      <div class="main bg-lightgrey section6" style="padding: 3.5em 0;">
+      <div class="main bg-lightgrey section-box" style="padding: 3.5em 0;">
          <div class="container">
             <div lang="en"><h1 class="d-block mb-4 title-blue1" style="text-align: center;">Three steps to register</h1><br><br></div>
             <div lang="vi"><h1 class="d-block mb-4 title-blue1" style="text-align: center;">Ba bước đăng ký</h1><br><br></div>
@@ -428,7 +428,7 @@
          </div>
       </div>
       <!-- section 7 -->
-      <div class="main bg-darkaqua section7" style="padding: 3.5em 0;">
+      <div class="main bg-darkaqua section-box" style="padding: 3.5em 0;">
          <div class="container">
             <!-- english -->
             <div lang="en" class="col-md-10">
@@ -478,7 +478,7 @@
          </div>
       </div>
       <!-- section 8 -->
-      <div style="padding: 3.5em 0;" class="section8"><a href="#customer" name="customer"></a>
+      <div style="padding: 3.5em 0;" class="section-box"><a href="#customer" name="customer"></a>
          <div class="container">
             <div lang="en" class="col-md-12">
                <h1 class="title-blue2 d-block mb-4" style="text-align: center;">FPT.EagleEye is pleased to serve</h1>
@@ -537,7 +537,7 @@
          </div>
       </div>
       <!-- last section -->
-      <footer class="main bg-end section9"><a href="#contact" name="contact"></a>
+      <footer class="main bg-end section-box"><a href="#contact" name="contact"></a>
          <div class="container">
             <div class="row mb-5" style="padding-top: 45px;">
                <div class="col-md-6">
@@ -708,22 +708,18 @@
          });
       </script>
       <script>
+         // animation for scroll
          ScrollReveal({ reset: true });
-         ScrollReveal().reveal('.section2');
-         ScrollReveal().reveal('.section3', { delay: 200 });
-         ScrollReveal().reveal('.section4', { delay: 200 });
-         ScrollReveal().reveal('.section5', { delay: 200 });
-         ScrollReveal().reveal('.section6', { delay: 200 });
-         ScrollReveal().reveal('.section7', { delay: 200 });
-         ScrollReveal().reveal('.section8', { delay: 200 });
-         ScrollReveal().reveal('.section9', { delay: 200 });
+         ScrollReveal().reveal('.section-box', { delay: 50 });
 
+         // burger menu when the window is being resized to quite small
          $('.navTrigger').click(function () {
             $(this).toggleClass('active');
             console.log("Clicked menu");
             $("#mainListDiv").toggleClass("show_list");
             $("#mainListDiv").fadeIn();
          });
+
          // Function used to shrink nav bar removing paddings and adding blue color navbar
          $(window).scroll(function() {
                if ($(document).scrollTop() > 650) {
