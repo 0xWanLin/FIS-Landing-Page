@@ -498,8 +498,8 @@ a:active {
 }
 /* button form */
 .open-button {
-    background-color: #eea3ff;
-    color: #000;
+    background-color: #46d7e8;
+    color: black;
     padding: 16px 20px;
     border: none;
     cursor: pointer;
@@ -512,12 +512,12 @@ a:active {
     border-radius: 25px;
 }
 .open-button:hover {
-    background-color: #5a19a0;
-    color: #eea3ff;
+    background-color:  #65008f;
+    color: #46d7e8;
 }
 .open-button1 {
-    background-color: #eea3ff;
-    color: #000;
+    background-color: #46d7e8;
+    color: black;
     padding: 16px 20px;
     border: none;
     cursor: pointer;
@@ -530,12 +530,12 @@ a:active {
     text-transform:uppercase;
 }
 .open-button1:hover {
-    background-color: #5a19a0;
-    color: #eea3ff;
+    background-color: #65008f;
+    color: #46d7e8;
 }
 .open-button2 {
-    background-color: #eea3ff;
-    color: #000;
+    background-color: #46d7e8;
+    color: black;
     padding: 16px 30px;
     border: none;
     cursor: pointer;
@@ -548,8 +548,8 @@ a:active {
     display: inline-block;
 }
 .open-button2:hover {
-    background-color: #5a19a0;
-    color: #eea3ff;
+    background-color: #65008f;
+    color: #46d7e8;
 }
 .btn-3steps {
     margin: auto;
@@ -584,7 +584,7 @@ a:active {
     position: fixed;
 }
 .form-container button {
-    background-color: #eea3ff;
+    background-color: #46d7e8;
     color: #000;
     padding: 16px 20px;
     border: none;
@@ -596,8 +596,8 @@ a:active {
     margin-right: 15%;
 }
 .form-container button:hover {
-    background-color: #5a19a0;
-    color: #eea3ff;
+    background-color: #65008f;
+    color: #46d7e8;
 }
 .form-container input[type=text]{
     width: 100%;
@@ -661,7 +661,7 @@ a:active {
     font-weight: bold;
     color: #184ca0;
     text-decoration: underline;
-    text-decoration-color: #eea3ff; 
+    text-decoration-color: #46e8b4; 
     text-decoration-thickness: 15%;
     text-decoration-skip-ink: none;
 }
@@ -696,7 +696,7 @@ a:active {
     font-weight: bold;
     color: #184ca0;
     text-decoration: underline;
-    text-decoration-color: #eea3ff; 
+    text-decoration-color: #46e8b4; 
     text-decoration-thickness: 15%;
     text-decoration-skip-ink: none;
     width: 100%;
@@ -765,7 +765,7 @@ video {
     padding-top: 40px;
     font-size: 45px;
     text-decoration: underline;
-    text-decoration-color: #eea3ff; 
+    text-decoration-color: #46e8b4; 
     text-decoration-thickness: 15%;
     text-decoration-skip-ink: none;
 }
@@ -775,7 +775,7 @@ video {
     margin-top: 15px;
     font-size: 32px;
     text-decoration: underline;
-    text-decoration-color: #eea3ff; 
+    text-decoration-color: #46e8b4; 
     text-decoration-thickness: 15%;
     text-decoration-skip-ink: none;
     font-weight: bold;
@@ -800,7 +800,7 @@ video {
     /* float: right; */
 }
 .left-text1 {
-    color: #f4c3ff;
+    color: #46e8b4;
     font-size: 25px;
     font-weight: bold;
     margin-top: 15px;
@@ -853,7 +853,7 @@ video {
     color: #184ca0;
     font-size: 35px;
     text-decoration: underline;
-    text-decoration-color: #eea3ff; 
+    text-decoration-color: #46e8b4; 
     text-decoration-thickness: 15%;
     text-decoration-skip-ink: none;
     font-weight: bold;
@@ -868,12 +868,12 @@ video {
     color: white;
     font-size: 35px;
     text-decoration: underline;
-    text-decoration-color: #eea3ff; 
+    text-decoration-color: #46e8b4; 
     text-decoration-thickness: 15%;
     text-decoration-skip-ink: none;
 }
-.pink-text {
-    color: #eea3ff;
+.green-text {
+    color: #46e8b4;
     font-size: 18px;
 }
 .white-text {
@@ -909,8 +909,8 @@ video {
 .active, .dot:hover {
     background-color: #717171;
 }
-.pink {
-    color: #eea3ff;
+.green {
+    color: #46e8b4;
 }
 .section8-text {
     font-size: 20px;
@@ -929,7 +929,7 @@ video {
     color: #184ca0;
     font-size: 35px;
     text-decoration: underline;
-    text-decoration-color: #eea3ff; 
+    text-decoration-color: #46e8b4; 
     text-decoration-thickness: 15%;
     text-decoration-skip-ink: none;
     font-weight: bold;
@@ -951,8 +951,8 @@ video {
     font-weight: normal;
 }
 .brochure-btn {
-    background-color: #eea3ff;
-    color: #000;
+    background-color: #46d7e8;
+    color: black;
     padding: 16px 20px;
     border: none;
     cursor: pointer;
@@ -965,11 +965,11 @@ video {
     display: inline-block;
 }
 .brochure-btn:hover {
-    background-color: #5a19a0;
-    color: #eea3ff;
+    background-color: #65008f;
+    color: #46d7e8;
 }
 .register-btn {
-    background-color: #eea3ff;
+    background-color: #46d7e8;
     color: #000;
     padding: 16px 20px;
     border: none;
@@ -980,8 +980,8 @@ video {
     border-radius: 25px;
 }
 .register-btn:hover {
-    background-color: #5a19a0;
-    color: #eea3ff;
+    background-color: #65008f;
+    color: #46d7e8;
 }
 .center-block {
     display: block;
